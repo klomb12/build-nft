@@ -6,22 +6,21 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/utils/Counters.sol";
 
 contract NFT is ERC721URIStorage {
-
     //auto-increment field for each token
     using Counters for Counters.Counter;
 
     Counters.Counter private _tokenIds;
 
-    //address of the NFT market place
+    //address of the NFT marketplace
     address contractAddress;
 
-    constructor(address marketplaceAddress) ERC721("rschain ", "rs"){
-       contractAddress = marketplaceAddress;
+    constructor(address marketplaceAddress) ERC721("rschain ", "rs") {
+        contractAddress = marketplaceAddress;
     }
 
     /// @notice create a new token
     /// @param tokenURI : token URI
-    function createToken(string memory tokenURI) public returns(uint) {
+    function createToken(string memory tokenURI) public returns (uint256) {
         //set a new token id for the token to be minted
         _tokenIds.increment();
         uint256 newItemId = _tokenIds.current();
@@ -32,6 +31,5 @@ contract NFT is ERC721URIStorage {
 
         //return token ID
         return newItemId;
-
     }
 }
