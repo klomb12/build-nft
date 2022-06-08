@@ -7,12 +7,11 @@ import Web3Modal from 'web3modal'
 const client = ipfsHttpClient('https://ipfs.infura.io:5001/api/v0');
 
 import {
-    nftaddress, nftmarketaddress
-} from '../config';
-import NFT from '../artifacts/contracts/NFT.sol/NFT.json';
-import Market from '../artifacts/contracts/NFTmarket.sol/NFTMarket.json';
-//import { EtherscanProvider } from '@ethersproject/providers'
-import Image from 'next/image'
+    rinkebynftaddress, rinkebymarketaddress
+} from '../../config';
+import NFT from '../../artifacts/contracts/NFT.sol/NFT.json';
+import Market from '../../artifacts/contracts/NFTmarket.sol/NFTMarket.json';
+import Image from 'next/image';
 
 
 export default function CreateItem() {
@@ -68,7 +67,7 @@ export default function CreateItem() {
 
         //sign the transaction
         const signer = provider.getSigner();
-        let contract = new ethers.Contract(nftaddress, NFT.abi, signer);
+        let contract = new ethers.Contract(rinkebynftaddress, NFT.abi, signer);
         let transaction = await contract.createToken(url);
         let tx = await transaction.wait()
 
@@ -84,19 +83,19 @@ export default function CreateItem() {
         //get a reference to the price entered in the form 
         const price = ethers.utils.parseUnits(formInput.price, 'ether')
 
-        contract = new ethers.Contract(nftmarketaddress, Market.abi, signer);
+        contract = new ethers.Contract(rinkebymarketaddress, Market.abi, signer);
 
         //get the listing price
         let listingPrice = await contract.getListingPrice()
         listingPrice = listingPrice.toString()
 
         transaction = await contract.createMarketItem(
-            nftaddress, tokenId, price, { value: listingPrice }
+            rinkebynftaddress, tokenId, price, { value: listingPrice }
         )
 
         await transaction.wait()
 
-        router.push('/')
+        router.push('/sellnft/ethereumform')
 
     }
 

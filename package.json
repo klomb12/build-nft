@@ -9,12 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/react": "^2.0.2",
+    "@emotion/react": "^11.9.0",
+    "@emotion/styled": "^11.8.1",
     "@openzeppelin/contracts": "^4.5.0",
+    "@web3-onboard/core": "^2.2.8",
+    "@web3-onboard/injected-wallets": "^2.0.6",
     "axios": "^0.27.2",
+    "bootstrap": "^5.1.3",
+    "framer-motion": "^6.3.3",
     "ipfs-http-client": "^56.0.3",
     "next": "12.1.5",
     "promise": "^8.1.0",
     "react": "18.0.0",
+    "react-bootstrap": "^2.4.0",
     "react-dom": "18.0.0",
     "react-router": "^6.3.0",
     "web3modal": "^1.9.7"
