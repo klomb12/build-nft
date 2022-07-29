@@ -15,23 +15,14 @@ const Index = () => {
             <Wrap spacing='30px' justify='center' align='center' mt={100} >
 
                 <WrapItem >
-
                     <Center w='20vh' h='32vh' bg={'blue.50'}>
                         <NextLink href='/create-item/ethereum-item' >
                             <Button bg='whiteAlpha.1' _hover={'blue.50'}>
                                 Ethereum
                             </Button>
-
-
                         </NextLink>
-
                     </Center>
-
-
-
-
                 </WrapItem>
-
                 <WrapItem>
 
                     <NextLink href='/create-item/bsc-item' >
@@ -44,12 +35,10 @@ const Index = () => {
                     </NextLink>
 
                 </WrapItem>
-
-
                 <WrapItem>
                     <NextLink href='/create-item/polygon-item' >
                         <Center w='180px' h='300px' bg='purple.200'>
-                            <Button bg='whiteAlpha.1' _hover={'purple.200'}>       Polygon</Button>
+                            <Button bg='whiteAlpha.1' _hover={'purple.200'}>Polygon</Button>
 
                         </Center>
                     </NextLink>

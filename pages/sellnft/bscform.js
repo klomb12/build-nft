@@ -22,9 +22,6 @@ export default function Home() {
         const tokenContract = new ethers.Contract(bscnftaddress, NFT.abi, bscprovider);
         const marketContract = new ethers.Contract(bscmarketaddress, Market.abi, bscprovider);
 
-
-
-
         //return an array of unsold market items
         const data = await marketContract.fetchMarketItems();
 

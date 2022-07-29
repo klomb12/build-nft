@@ -1,111 +1,37 @@
+import Head from 'next/head';
+import {
+  Flex,
+  Stack,
+} from '@chakra-ui/react';
 
-import { Wrap, WrapItem, Center, Text, Button, Image, Stack, Box, _hover, _active } from '@chakra-ui/react'
-import NextLink from 'next/link';
+import Container from './Container';
 
-export default function Home() {
 
+export default function Index() {
 
 
   return (
-    <div>
-      <Wrap align='center' justify='right'>
-        <WrapItem>
-          <NextLink href='/wallet-connect'>
-            <Center marginRight={10}>
-              <Button colorScheme='pink' size='sm'>
-                Connect wallet
-              </Button>
-            </Center>
-          </NextLink>
-        </WrapItem>
-      </Wrap>
-
-      <Text fontSize={80} textAlign='center' fontFamily='cursive'>
-        welcom to rschain marketplace  <span> 😀 </span>
-      </Text>
-      <Text fontSize={30} textAlign='center' fontFamily='sans-serif'>
-        take your opportunity today ,create and sell your NFT
-
-      </Text>
-      <Wrap spacing='30px' justify='center' align='center' mt={100} paddingBottom='70px'>
-
-        <WrapItem >
-          <NextLink href='/sellnft/ethereumform' >
-            <Center w='80px' h='30px'>
-              <Button _hover={{
-                bg: 'pink.100'
-              }}
-              >
-                Ethereum
-              </Button>
-
-
-            </Center>
-
-          </NextLink >
-
-
-        </WrapItem>
-        <WrapItem >
-          <NextLink href='/sellnft/bscform' >
-            <Center w='80px' h='30px'>
-
-              <Button _hover={{
-                bg: 'pink.100'
-              }}>
-                BSC
-              </Button>
-            </Center>
-
-          </NextLink >
-        </WrapItem>
-        <WrapItem >
-          <NextLink href='/sellnft/polygonform' >
-            <Center w='80px' h='30px' >
-
-              <Button _hover={{
-                bg: 'pink.100'
-              }}>
-                Polygon
-              </Button>
-            </Center>
-
-          </NextLink >
-        </WrapItem>
-      </Wrap>
-      <Wrap align='center' justify='center'>
-
-
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-        <Box boxSize='sm'>
-          <Image src='https://bit.ly/dan-abramov' alt='Dan Abramov' />
-        </Box>
-
-
-      </Wrap>
-    </div >
+    <Container>
+      <Head>
+        <title>Rschain website </title>
+      </Head>
+      <Stack
+        as="main"
+        spacing={8}
+        justifyContent="center"
+        alignItems="flex-start"
+        m="0 auto 4rem auto"
+        maxWidth="700px"
+        px={2}
+      >
+        <Flex
+          flexDirection="column"
+          justifyContent="flex-start"
+          alignItems="flex-start"
+          maxWidth="700px"
+        >
+        </Flex>
+      </Stack>
+    </Container>
   )
 }
