@@ -7,7 +7,7 @@ import NFT from '../../artifacts/contracts/NFT.sol/NFT.json';
 import Market from '../../artifacts/contracts/NFTmarket.sol/NFTMarket.json';
 import Image from 'next/image'
 
-export default function Home() {
+export default function polygonplace() {
     const [nfts, setNfts] = useState([]);
     const [loadingState, setLoadingState] = useState('not-loaded');
 

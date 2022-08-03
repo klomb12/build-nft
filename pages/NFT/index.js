@@ -14,39 +14,214 @@ import {
     useColorModeValue,
     Link,
     Center,
-    Grid,
-    GridItem,
-    Slider,
-    SliderFilledTrack,
-    SliderTrack,
-    SliderThumb
+    HStack,
+    Wrap, onOpen, onClose, Drawer, isOpen, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader,
+    DrawerBody, InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea, DrawerFooter, FormLabel,
+    Input, Popover, PopoverTrigger, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverFooter,
+    Portal, PopoverCloseButton, Checkbox, FormControl, InputRightElement,
 } from '@chakra-ui/react';
 import React from 'react';
-import Index from '../sellnft';
 import Footer from '../footer';
-import Nav from '../Nav';
+import { AddIcon } from '@chakra-ui/icons';
+import { useDisclosure } from '@chakra-ui/react';
+import { useState } from 'react';
+import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
+import { useRouter } from 'next/router';
+
+
+
+
 
 export default function CallToActionWithVideo() {
+    const [showPassword, setShowPassword] = useState(false);
+    const router = useRouter();
+    const { isOpen, onOpen, onClose } = useDisclosure()
+    const firstField = React.useRef()
+
+    const moovpage = () => {
+        router.push('./sellnft/polygonplace')
+    }
+
+
     return (
         <>
-            <Nav />
+            <Image height={32}
+                viewBox="0 0 120 28" src='Logo2.png' alt='Rschain' />
+            <Popover>
+                <PopoverTrigger>
+                    <Text align={'right'}
+                        paddingRight={'16'}
+                        pb={10}
+                        mt={-20}
+                    > <Button as={'circle'}
+                        rounded={'full'}
+                        colorScheme={'gray'}
+                        fontFamily='cursive'
+                        color={'blackAlpha.800'}
+                        fontSize='medium'
+                    >
+                            Connexion
+                        </Button>
+                    </Text>
+                </PopoverTrigger>
+                <Portal>
+                    <PopoverContent>
+                        <PopoverArrow />
+                        <PopoverHeader>Connectez vous !</PopoverHeader>
+                        <PopoverCloseButton />
+                        <PopoverBody>
+                            <Box> <FormLabel>Email</FormLabel>
+                                <Input type="email" />
+                            </Box>
+                            <Box>
+                                <FormLabel>Mot de passe</FormLabel>
+                                <Input type="password" />
+                            </Box>
+                            <Stack
+                                direction={{ base: 'column', sm: 'row' }}
+                                align={'start'}
+                                justify={'space-between'}>
+                                <Checkbox>Se souvenir</Checkbox>
+                                <Link color={'blue.500'}>Mot de passe oublié?</Link>
+                            </Stack>
+                        </PopoverBody>
+                        <PopoverFooter>
+                            <Button colorScheme={'green'} variant={'solid'} >
+                                Connexion
+                            </Button>
+                        </PopoverFooter>
+                    </PopoverContent>
+                </Portal>
+            </Popover >
 
-            <Container maxW={'7xl'}>
-
-                <Text align={'right'} padding={'5'}>
-                    <Button>
-                        Create NFT
-                    </Button>
-
-                </Text>
-                <Text
-                    //bgGradient='linear(to-l, #7928CA, #FF0080)'
-                    bgClip='text'
-                    fontSize='6xl'
-                    fontWeight='extrabold'
+            <Center fontWeight={600}
+                fontSize={{ base: '3xl', sm: '4xl', md: '6xl' }}
+                lineHeight={'110%'} >  <Text borderTop={'2px'}>NFT {''}</Text>
+                <Text as={'span'} color={'orange.400'}
+                    borderBottom={'4px'}
                 >
-                    Welcome to Rschain Marketplace
+                    Marketplace
+
                 </Text>
+            </Center>
+            <Text align={'right'}
+                paddingRight={'16'}
+            >
+                <Button
+                    _hover={{ bg: "", color: "orange.400" }}
+                    rounded={'full'}
+                    fontWeight={'bold'}
+                    m={'7'}
+                    leftIcon={<AddIcon color={'orange.400'}
+                    />}
+                    onClick={onOpen}
+                >
+                    Creer NFT
+                </Button>
+                <Drawer
+                    isOpen={isOpen}
+                    placement='right'
+                    initialFocusRef={firstField}
+                    onClose={onClose}
+                >
+                    <DrawerOverlay />
+                    <DrawerContent>
+                        <DrawerCloseButton />
+                        <DrawerHeader borderBottomWidth='1px'>
+                            Creer votre compte
+                        </DrawerHeader>
+
+                        <DrawerBody>
+                            <Stack spacing='24px'>
+                                <Box>
+                                    <FormControl id="firstName" isRequired>
+                                        <FormLabel>Nom</FormLabel>
+                                        <Input type="text" />
+                                    </FormControl>
+                                </Box>
+                                <Box>
+                                    <FormControl id="lastName">
+                                        <FormLabel>prenom</FormLabel>
+                                        <Input type="text" />
+                                    </FormControl>
+
+                                </Box>
+                                <Box>
+                                    <FormControl id="email" isRequired>
+                                        <FormLabel>Adresse mail </FormLabel>
+                                        <Input type="email" />
+                                    </FormControl>
+                                </Box>
+
+                                <Box>
+                                    <FormControl id="password" isRequired>
+                                        <FormLabel>Mot de passe</FormLabel>
+                                        <InputGroup>
+                                            <Input type={showPassword ? 'text' : 'password'} />
+                                            <InputRightElement h={'full'}>
+                                                <Button
+                                                    variant={'ghost'}
+                                                    onClick={() =>
+                                                        setShowPassword((showPassword) => !showPassword)
+                                                    }>
+                                                    {showPassword ? <ViewIcon /> : <ViewOffIcon />}
+                                                </Button>
+                                            </InputRightElement>
+                                        </InputGroup>
+                                    </FormControl>
+                                </Box>
+
+                                <Stack pt={6}>
+                                    <Text align={'center'}>
+                                        Déjà utilisateur? <Link color={'blue.400'}>Connexion</Link>
+                                    </Text>
+                                </Stack>
+                            </Stack>
+                        </DrawerBody>
+
+                        <DrawerFooter borderTopWidth='1px'>
+                            <Button variant='outline' mr={'10'} onClick={onClose}
+                                size="lg"
+                            >
+                                Retour
+                            </Button>
+                            <Stack spacing={10} pt={2}>
+                                <Button
+                                    variant={'solid'}
+                                    loadingText="En cours ..."
+                                    size="lg"
+                                    bg={'green.500'}
+
+                                    borderColor={'green.300'}
+                                    color={'white'}
+                                    _hover={{
+                                        bg: 'green.500',
+                                    }}>
+                                    Envoyer
+                                </Button>
+                            </Stack>
+                        </DrawerFooter>
+                    </DrawerContent>
+                </Drawer>
+
+                <Button
+
+                    _hover={{ bg: "gray.100", color: "orange.400" }}
+                    rounded={'full'}
+                    fontWeight={'bold'}
+                    color={'white'}
+                    colorScheme={'cyan'}
+                    onClick={moovpage}
+
+                >
+                    Acheter NFT
+                </Button>
+
+
+            </Text>
+
+            <Container maxW={'7xl'} padding={'-20'}>
+
 
                 <Stack
                     align={'center'}
@@ -68,13 +243,13 @@ export default function CallToActionWithVideo() {
                                     position: 'absolute',
                                     bottom: 1,
                                     left: 0,
-                                    bg: 'red.400',
+                                    bg: 'orange.400',
                                     zIndex: -1,
                                 }}>
                                 C'est Quoi,
                             </Text>
                             <br />
-                            <Text as={'span'} color={'red.400'}>
+                            <Text as={'span'} color={'orange.300'} _hover={{ bg: "", color: "orange.400" }}>
                                 Non-Fungible Token!
                             </Text>
                         </Heading>
@@ -84,25 +259,19 @@ export default function CallToActionWithVideo() {
                         <Stack
                             spacing={{ base: 4, sm: 6 }}
                             direction={{ base: 'column', sm: 'row' }}>
-                            <Button
+                            <Button as={'a'}
                                 rounded={'full'}
                                 size={'lg'}
                                 fontWeight={'normal'}
                                 px={6}
                                 colorScheme={'red'}
-                                bg={'red.400'}
-                                _hover={{ bg: 'red.500' }}
+                                bg={'orange.200'}
+                                _hover={{ bg: 'green.400' }}
+                                href={'../A_propos'}
                             >
-                                Get started
+                                Commencer
                             </Button>
-                            <Button
-                                rounded={'full'}
-                                size={'lg'}
-                                fontWeight={'normal'}
-                                px={6}
-                                leftIcon={<PlayIcon h={4} w={4} color={'gray.300'} />}>
-                                How It Works
-                            </Button>
+
                         </Stack>
                     </Stack>
                     <Flex
@@ -146,26 +315,47 @@ export default function CallToActionWithVideo() {
                                 w={'100%'}
                                 h={'100%'}
                                 src={
-                                    'https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=800&q=80'
+                                    'nft3.jpg'
                                 }
                             />
                         </Box>
                     </Flex>
                 </Stack>
-                <Center >
-                    <Button >
+                <Stack spacing={'24'} isInline={'true'} justify={'center'}>
+                    <Button as={'a'}
+
+                        size={'sm'}
+                        borderBottom={'2px'} borderColor={'orange.400'}
+                        _hover={{ bg: "", color: "orange.400" }}
+
+                        fontWeight={'bold'}
+                        href='../sellnft/ethereumplace  '
+                    >
                         Ethereum
                     </Button>
-                    <Button>
-                        Binance
-                    </Button>
-                    <Button>
+                    <Button as={'a'}
+                        size={'sm'}
+                        href='../sellnft/polygonplace '
+                        borderBottom={'2px'} borderColor={'orange.400'}
+                        _hover={{ bg: "", color: "orange.400" }}
+                        fontWeight={'bold'}
+                    >
                         Polygon
                     </Button>
-                </Center>
-                <Box >
 
-                </Box>
+                    <Button as={'a'}
+                        size={'sm'}
+                        href='../sellnft/bscplace '
+                        borderBottom={'2px'} borderColor={'orange.400'}
+                        _hover={{ bg: "", color: "orange.400" }}
+                        fontWeight={'bold'}
+                    >
+                        BSC
+                    </Button>
+                </Stack>
+                <Stack bg={'azure'} h='xs'>
+
+                </Stack>
 
             </Container>
 

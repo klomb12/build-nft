@@ -4,6 +4,9 @@ import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
 import { VStack, Text, HStack, Wrap, Box, Flex, Square, Center, Image, Container, Button, WarningIcon, CheckCircleIcon } from "@chakra-ui/react";
 import { toHex, truncateAddress } from './utils'
+import Footer from './footer';
+import { Stack } from 'react-bootstrap';
+
 
 
 const INFURA_ID = "cac1807c01c04b07a1188c772d768bdf"
@@ -106,6 +109,9 @@ export default function walletconnect() {
 
 
     };
+    const moovpage = () => {
+        router.push('./sellnft/polygonplace')
+    }
 
     const refreshState = () => {
         setAccount("");
@@ -116,33 +122,44 @@ export default function walletconnect() {
         <>
             <Flex color='blackAlpha'>
 
-                <Box w='100vh' h='100vh' bgGradient='linear(to-r, gray.300, yellow.400, pink.200)'>
-                    <Image src='ethereum.png'>
+                <Box w='70vh' h={'100vh'} bg='yellow.400'>
+                    <Image src='walletimg4.png' w='70vh' h={'100vh'} />
 
-                    </Image>
+
                 </Box>
                 <Box flex='1' >
 
-                    <Text fontSize={100} justify='ceneter' ml='80px'>Connect Wallet</Text>
-                    <Text ml='80px' color={'blackAlpha.500'} fontSize={50}>Choose how you want to connect</Text>
+                    <Text fontSize={'7xl'} align={'center'}
+                        fontWeight={'extrabold'}
+                    >
+                        Connect Wallet
+                    </Text>
+                    <Text color={'blackAlpha.500'} fontSize={50} align={'center'}>
+                        Connectez vous a votre portefeuille afin de faire vos achats
+                    </Text>
 
-                    <Center>
+                    <Stack direction='row' align='center'>
                         {!account ? (
-                            <Button onClick={connectWallets} colorScheme='teal' size='lg' height='48px' alignSelf={'ceneter'}
+                            <Button onClick={connectWallets} colorScheme={'teal'} size='md' height='48px'
                                 width='200px'
                                 border='2px'
-                                borderColor='green.500'
-                                mt={50}
+                                borderColor='yellow.500'
+                                rounded={'full'}
+                                fontWeight={'bold'}
+                                _hover={{ bg: "", color: "yellow.400" }}
+                                mt={'16'}
                             >
                                 connect
                             </Button>
                         ) : (
-                            <Button onClick={disconnect}>Disconnect</Button>
+                            <Button onClick={moovpage}>test</Button>
                         )}
 
-                    </Center>
+                    </Stack>
                 </Box>
+
             </Flex>
+
         </>
     )
 }

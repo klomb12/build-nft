@@ -13,7 +13,8 @@ import {
     PopoverContent,
     useColorModeValue,
     useBreakpointValue,
-    useDisclosure
+    useDisclosure,
+    Image
 } from '@chakra-ui/react';
 
 import {
@@ -26,7 +27,7 @@ export default function Nav() {
     const { isOpen, onToggle } = useDisclosure();
 
     return (
-        <Box>
+        <Box >
             <Flex
                 bg={useColorModeValue('white', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
@@ -37,6 +38,7 @@ export default function Nav() {
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.900')}
                 align={'center'}>
+
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
                     ml={{ base: -2 }}
@@ -51,12 +53,8 @@ export default function Nav() {
                     />
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <Text
-                        Align={({ base: 'center', md: 'left' })}
-                        fontFamily={'heading'}
-                        color={useColorModeValue('gray.800', 'white')}>
-                        RSchain
-                    </Text>
+                    <Image height={'50px'} w={'100px'}
+                        src='Logo.png' />
 
                     <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
                         <DesktopNav />
@@ -73,7 +71,7 @@ export default function Nav() {
                         fontSize={'sm'}
                         fontWeight={400}
                         variant={'link'}
-                        href={'#'}>
+                        href={'../walletconnect'}>
                         Sign In
                     </Button>
                     <Button
@@ -82,7 +80,7 @@ export default function Nav() {
                         fontWeight={600}
                         color={'white'}
                         bg={'pink.400'}
-                        href={'#'}
+                        href={'../walletconnect'}
                         _hover={{
                             bg: 'pink.300',
                         }}>

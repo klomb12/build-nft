@@ -8,7 +8,7 @@ import {
     Stack,
     StackDivider,
     Icon,
-    useColorModeValue,
+    useColorModeValue, Link
 } from '@chakra-ui/react';
 import {
     IoAnalyticsSharp,
@@ -18,6 +18,7 @@ import {
 import { ReactElement } from 'react';
 import Nav from './Nav';
 import Footer from './footer';
+
 
 const Feature = ({ text, icon, iconBg }) => {
     return (
@@ -177,6 +178,7 @@ export default function Apropo() {
                         <Text color={'gray.500'} fontSize={'lg'}>
                             Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                             nonumy eirmod tempor invidunt ut labore
+
                         </Text>
                         <Stack
                             spacing={4}

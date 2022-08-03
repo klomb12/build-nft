@@ -9,6 +9,7 @@ import {
     StackDivider,
     Icon,
     useColorModeValue,
+    Link
 } from '@chakra-ui/react';
 import {
     IoAnalyticsSharp,
@@ -18,6 +19,7 @@ import {
 } from 'react-icons/io5';
 import { MdOutlineTipsAndUpdates } from "react-icons/md";
 import { ReactElement } from 'react';
+import Apropo from '../A_propos';
 
 const Feature = ({ text, icon, iconBg }) => {
     return (
@@ -55,7 +57,10 @@ export default function Apropos() {
                     <Heading>Rschain</Heading>
                     <Text color={'gray.500'} fontSize={'lg'}>
                         Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
-                        nonumy eirmod tempor invidunt ut labore
+                        nonumy eirmod tempor invidunt ut labore... {''}
+                        <Link color='teal.500' href='../A_propos' textTransform={'full-width'}>
+                            Lire plus
+                        </Link>
                     </Text>
                     <Stack
                         spacing={4}

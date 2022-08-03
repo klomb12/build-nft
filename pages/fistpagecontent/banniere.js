@@ -42,7 +42,7 @@ export default function Banniere() {
         {
             title: 'WELCOME TO RSCHAIN ',
             text: "BLOCKCHAIN AND SECURITY",
-            image: 'banerimg1.jpg',
+            image: 'baner5.jpg',
 
         },
         {
