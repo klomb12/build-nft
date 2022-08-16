@@ -56,7 +56,7 @@ export default function Apropos() {
                     </Text>
                     <Heading>Rschain</Heading>
                     <Text color={'gray.500'} fontSize={'lg'}>
-                        Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
+                        Lorem lo ipsum dolor sit amet, consetetur sadipscing elitr, sed diam
                         nonumy eirmod tempor invidunt ut labore... {''}
                         <Link color='teal.500' href='../A_propos' textTransform={'full-width'}>
                             Lire plus
