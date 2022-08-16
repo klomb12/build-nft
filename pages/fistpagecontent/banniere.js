@@ -126,17 +126,20 @@ export default function Banniere() {
                                     w={'full'}
                                     maxW={'lg'}
                                     position="absolute"
-                                    top="50%"
+                                    top="20%"
                                     transform="translate(0, -50%)">
-                                    <Center>
 
+                                    <Heading fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}
+                                        textAlign={'center'}
+                                        color={'black'}>
+                                        {card.title}
+                                    </Heading>
 
-                                        <Heading fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}>
-                                            {card.title}
-                                        </Heading>
-                                    </Center>
-                                    <Center fontSize={{ base: 'md', lg: 'lg' }} color='CaptionText'>
+                                    <Center fontSize={{ base: 'md', lg: 'lg' }} color='blackAlpha' fontWeight={'bold'}
+                                        fontFamily={'fantasy'}
+                                    >
                                         {card.text}
+
                                     </Center>
                                 </Stack>
                             </Container>

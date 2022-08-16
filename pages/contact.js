@@ -16,7 +16,6 @@ import {
     InputGroup,
     InputLeftElement,
     Textarea,
-    Center,
 } from '@chakra-ui/react';
 import Footer from './footer';
 import {
@@ -26,6 +25,7 @@ import {
     MdFacebook,
     MdOutlineEmail,
 } from 'react-icons/md';
+
 import { BsGithub, BsDiscord, BsPerson } from 'react-icons/bs';
 import Nav from './Nav';
 
@@ -124,10 +124,12 @@ export default function Contact() {
                                                 <FormControl id="name">
                                                     <FormLabel>Nom</FormLabel>
                                                     <InputGroup borderColor="#E0E1E7">
-                                                        <InputLeftElement
-                                                            pointerEvents="none"
-                                                            children={<BsPerson color="gray.800" />}
-                                                        />
+                                                        <Input putLeftElement
+                                                            pointerEvents="none">
+
+                                                            <BsPerson color="gray.800" />
+                                                        </Input>
+
                                                         <Input type="text" size="md" />
                                                     </InputGroup>
                                                 </FormControl>
@@ -136,7 +138,7 @@ export default function Contact() {
                                                     <InputGroup borderColor="#E0E1E7">
                                                         <InputLeftElement
                                                             pointerEvents="none"
-                                                            children={<MdOutlineEmail color="gray.800" />}
+                                                            MdOutlineEmail color="gray.800"
                                                         />
                                                         <Input type="text" size="md" />
                                                     </InputGroup>

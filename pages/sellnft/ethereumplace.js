@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+
 import {
     IconButton,
     Avatar,
@@ -21,7 +21,7 @@ import {
     MenuDivider,
     MenuItem,
     MenuList,
-    isOpen, onOpen, onClose, Center, SimpleGrid, Image, Stack
+    Center, SimpleGrid, Image, Stack
 } from '@chakra-ui/react';
 import {
     FiHome,
@@ -31,10 +31,9 @@ import {
     FiSettings,
     FiMenu,
     FiBell,
-    FiChevronDown, children
+    FiChevronDown,
 } from 'react-icons/fi';
-import { IconType } from 'react-icons';
-import { Container } from 'react-bootstrap';
+
 
 
 
@@ -78,19 +77,19 @@ export default function SidebarWithHeader() {
 
                     <Box bg='tomato'  >
                         <Image src='../projet1.jpg'
-                            boxSize='full' />
+                            boxSize='full' alt='Rschain' />
                     </Box>
                     <Box bg='tomato'  >
                         <Image src='../projet2.jpg'
-                            boxSize='full' />
+                            boxSize='full' alt='Rschain' />
                     </Box>
                     <Box bg='tomato' >
                         <Image src='../projet3.jpg'
-                            boxSize='full' />
+                            boxSize='full' alt='Rschain' />
                     </Box>
                     <Box bg='tomato'  >
                         <Image src='../projet1.jpg'
-                            boxSize='full' />
+                            boxSize='full' alt='Rschain' />
                     </Box>
 
                 </SimpleGrid>

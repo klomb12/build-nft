@@ -47,19 +47,19 @@ export default function Projet() {
             <SimpleGrid columns={4} spacing={10}>
                 <Box bg='blue.100' height='auto'>
                     <Image src='projet1.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
                 <Box bg='tomato' height='auto'>
                     <Image src='projet2.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
                 <Box bg='tomato' height='auto'>
                     <Image src='projet3.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
                 <Box bg='tomato' height='auto'>
                     <Image src='projet1.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
 
             </SimpleGrid>
@@ -67,19 +67,19 @@ export default function Projet() {
 
                 <Box bg='blue.100' height='auto'>
                     <Image src='projet1.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
                 <Box bg='tomato' height='auto'>
                     <Image src='projet2.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
                 <Box bg='tomato' height='auto'>
                     <Image src='projet3.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
                 <Box bg='tomato' height='auto'>
                     <Image src='projet1.jpg'
-                        boxSize='full' />
+                        boxSize='full' alt='Rschain' />
                 </Box>
             </SimpleGrid>
 

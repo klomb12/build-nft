@@ -10,15 +10,12 @@ import {
     Icon,
     IconButton,
     createIcon,
-    IconProps,
     useColorModeValue,
     Link,
     Center,
-    HStack,
-    Wrap, onOpen, onClose, Drawer, isOpen, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader,
-    DrawerBody, InputGroup, InputLeftAddon, InputRightAddon, Select, Textarea, DrawerFooter, FormLabel,
-    Input, Popover, PopoverTrigger, PopoverArrow, PopoverBody, PopoverContent, PopoverHeader, PopoverFooter,
-    Portal, PopoverCloseButton, Checkbox, FormControl, InputRightElement,
+    Drawer, DrawerOverlay, DrawerContent, DrawerCloseButton, DrawerHeader,
+    DrawerBody, InputGroup, DrawerFooter, FormLabel, Portal, PopoverArrow, PopoverBody,
+    Input, Popover, PopoverTrigger, PopoverHeader, PopoverFooter, PopoverContent, PopoverCloseButton, Checkbox, FormControl, InputRightElement,
 } from '@chakra-ui/react';
 import React from 'react';
 import Footer from '../footer';
@@ -29,10 +26,7 @@ import { ViewIcon, ViewOffIcon } from '@chakra-ui/icons';
 import { useRouter } from 'next/router';
 
 
-
-
-
-export default function CallToActionWithVideo() {
+export default function Nftplateform() {
     const [showPassword, setShowPassword] = useState(false);
     const router = useRouter();
     const { isOpen, onOpen, onClose } = useDisclosure()
@@ -205,13 +199,13 @@ export default function CallToActionWithVideo() {
                 </Drawer>
 
                 <Button
-
+                    as={'a'} href={'../test'}
                     _hover={{ bg: "gray.100", color: "orange.400" }}
                     rounded={'full'}
                     fontWeight={'bold'}
                     color={'white'}
                     colorScheme={'cyan'}
-                    onClick={moovpage}
+
 
                 >
                     Acheter NFT
@@ -246,7 +240,7 @@ export default function CallToActionWithVideo() {
                                     bg: 'orange.400',
                                     zIndex: -1,
                                 }}>
-                                C'est Quoi,
+                                C est Quoi,
                             </Text>
                             <br />
                             <Text as={'span'} color={'orange.300'} _hover={{ bg: "", color: "orange.400" }}>
@@ -254,7 +248,7 @@ export default function CallToActionWithVideo() {
                             </Text>
                         </Heading>
                         <Text color={'gray.500'}>
-                            NFT are unique cryptographic tokens that exist on a blockchain and cannot be replicated. NFTs can represent real-world items like artwork and real estate. "Tokenizing" these real-world tangible assets makes buying, selling, and trading them more efficient while reducing the probability of fraud.
+                            NFT are unique cryptographic tokens that exist on a blockchain and cannot be replicated. NFTs can represent real-world items like artwork and real estate. Tokenizing these real-world tangible assets makes buying, selling, and trading them more efficient while reducing the probability of fraud.
                         </Text>
                         <Stack
                             spacing={{ base: 4, sm: 6 }}
@@ -353,9 +347,10 @@ export default function CallToActionWithVideo() {
                         BSC
                     </Button>
                 </Stack>
-                <Stack bg={'azure'} h='xs'>
+                <Stack bg={'azure'} h='xs' borderBottom={'1px'} borderColor='ButtonFace'>
 
                 </Stack>
+
 
             </Container>
 

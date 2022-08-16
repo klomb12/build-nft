@@ -1,5 +1,5 @@
 import { ethers } from 'ethers';
-import { useEffect, useState } from 'react';
+import { UseState, UseEffect } from 'react';
 import axios from 'axios';
 import Web3Modal from "web3modal"
 import { mumbaimarketaddress, mumbainftaddress } from '../../config';
@@ -8,10 +8,10 @@ import Market from '../../artifacts/contracts/NFTmarket.sol/NFTMarket.json';
 import Image from 'next/image'
 
 export default function polygonplace() {
-    const [nfts, setNfts] = useState([]);
-    const [loadingState, setLoadingState] = useState('not-loaded');
+    const [nfts, setNfts] = UseState([]);
+    const [loadingState, setLoadingState] = UseState('not-loaded');
 
-    useEffect(() => {
+    UseEffect(() => {
         loadNFTs();
 
     }, []);
@@ -81,8 +81,8 @@ export default function polygonplace() {
                                 <Image
                                     src={nft.image}
                                     alt="Picture of the author"
-                                    width={500}
-                                    height={500}
+                                    width={'300%'}
+                                    height={'300%'}
                                 // blurDataURL="data:..." automatically provided
                                 // placeholder="blur" // Optional blur-up while loading
                                 />

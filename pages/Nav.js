@@ -29,7 +29,7 @@ export default function Nav() {
     return (
         <Box >
             <Flex
-                bg={useColorModeValue('white', 'gray.800')}
+                bg={useColorModeValue('Background', 'gray.800')}
                 color={useColorModeValue('gray.600', 'white')}
                 minH={'60px'}
                 py={{ base: 2 }}
@@ -38,6 +38,7 @@ export default function Nav() {
                 borderStyle={'solid'}
                 borderColor={useColorModeValue('gray.200', 'gray.900')}
                 align={'center'}>
+
 
                 <Flex
                     flex={{ base: 1, md: 'auto' }}
@@ -53,40 +54,15 @@ export default function Nav() {
                     />
                 </Flex>
                 <Flex flex={{ base: 1 }} justify={{ base: 'center', md: 'start' }}>
-                    <Image height={'50px'} w={'100px'}
-                        src='Logo.png' />
+                    <Box w={'36'} h={'12'}
+                    >
+                        <Image src='Logo2.png' alt='RSCHAIN' />
+                    </Box>
 
-                    <Flex display={{ base: 'none', md: 'flex' }} ml={10}>
+                    <Flex display={{ base: 'none', md: 'flex' }} ml={10} mt={'5'}>
                         <DesktopNav />
                     </Flex>
                 </Flex>
-
-                <Stack
-                    flex={{ base: 1, md: 0 }}
-                    justify={'flex-end'}
-                    direction={'row'}
-                    spacing={6}>
-                    <Button
-                        as={'a'}
-                        fontSize={'sm'}
-                        fontWeight={400}
-                        variant={'link'}
-                        href={'../walletconnect'}>
-                        Sign In
-                    </Button>
-                    <Button
-                        display={{ base: 'none', md: 'inline-flex' }}
-                        fontSize={'sm'}
-                        fontWeight={600}
-                        color={'white'}
-                        bg={'pink.400'}
-                        href={'../walletconnect'}
-                        _hover={{
-                            bg: 'pink.300',
-                        }}>
-                        Sign Up
-                    </Button>
-                </Stack>
             </Flex>
 
             <Collapse in={isOpen} animateOpacity>
@@ -102,7 +78,7 @@ const DesktopNav = () => {
     const popoverContentBgColor = useColorModeValue('white', 'gray.800');
 
     return (
-        <Stack direction={'row'} spacing={4}>
+        <Stack direction={'row'} spacing={4} >
             {NAV_ITEMS.map((navItem) => (
                 <Box key={navItem.label}>
                     <Popover trigger={'hover'} placement={'bottom-start'}>

@@ -1,10 +1,8 @@
 {
-  "extends": "next/core-web-vitals"
-}
-module.exports = {
-  env: {
-    node: true,
-    browser: true,
-    es6: true,
-  },
+  "extends": "next",
+  "settings": {
+    "next": {
+      "rootDir": "packages/nft-marketplace/"
+    }
+  }
 }

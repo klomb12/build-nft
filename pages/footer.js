@@ -17,6 +17,7 @@ import { BiMailSend } from 'react-icons/bi';
 
 
 
+
 const SocialButton = ({
     children,
     label,
@@ -82,20 +83,18 @@ export default function Footer() {
                             </Stack>
                         </Stack>
                         <Stack align={'flex-start'}>
-                            <ListHeader>Company</ListHeader>
-                            <Link href={'#'}>A propos</Link>
-                            <Link href={'#'}>NFT plateform</Link>
-                            <Link href={'#'}>Blockchain & Sécurité</Link>
-                            <Link href={'#'}>Projet</Link>
-                            <Link href={'#'}>Contact</Link>
+                            <ListHeader >Company</ListHeader>
+                            <Link href={'./A_propos'} _hover={{ textDecoration: 'none', color: "green.600" }} >A propos</Link>
+                            <Link href={'./NFT'} _hover={{ textDecoration: 'none', color: "green.600" }} >NFT plateform</Link>
+                            <Link href={'./Blockchainsecurite'} _hover={{ textDecoration: 'none', color: "green.600" }}>Blockchain & Sécurité</Link>
+                            <Link href={'./Projets'} _hover={{ textDecoration: 'none', color: "green.600" }}>Projet</Link>
+                            <Link href={'./contact'} _hover={{ textDecoration: 'none', color: "green.600" }}>Contact</Link>
                         </Stack>
                         <Stack align={'flex-start'}>
                             <ListHeader>Support</ListHeader>
-                            <Link href={'#'}>Termes & Conditions</Link>
-                            <Link href={'#'}></Link>
-                            <Link href={'#'}></Link>
-                            <Link href={'#'}>Privacy Policy</Link>
-                            <Link href={'#'}></Link>
+                            <Link href={'#'} _hover={{ textDecoration: 'none', color: "green.600" }}>Termes & Conditions</Link>
+                            <Link href={'#'} _hover={{ textDecoration: 'none', color: "green.600" }}>Privacy Policy</Link>
+
                         </Stack>
                         <Stack align={'flex-start'}>
                             <ListHeader>NewsLetters</ListHeader>

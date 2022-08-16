@@ -1,7 +1,27 @@
+import { Box, Container, HStack } from '@chakra-ui/react'
 import React from 'react'
+import Footer from './footer'
+import Nav from './Nav'
 
-export default function Blockchainsecurite() {
+
+export default function Blockchainsecurty() {
     return (
-        <div>Blockchainsecurite</div>
+        <>
+            <Nav />
+            <HStack
+            >
+
+                <Box height={'lg'} bg='bisque' w={'100%'}>
+
+
+                </Box>
+
+
+            </HStack>
+
+
+            <Footer />
+        </>
+
     )
 }

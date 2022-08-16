@@ -7,7 +7,7 @@ import {
     Stack,
     Image,
     SimpleGrid,
-    VStack, h3
+    VStack
 } from '@chakra-ui/react';
 
 export default function Team() {
@@ -16,8 +16,8 @@ export default function Team() {
         <>
             <Heading bg={'pink.100'} textAlign='center' margin={'0'} paddingTop={'5'}
                 _hover={{ bg: "", color: " white" }}
-
             >
+
                 TEAM
 
             </Heading>
@@ -64,7 +64,7 @@ export default function Team() {
                                         height={230}
                                         width={282}
                                         objectFit={'cover'}
-                                        src={'apropos2.jpeg'}
+                                        src={'apropos2.jpeg'} alt='Rschain'
                                     />
                                 </Box>
                                 <Stack pt={10} align={'center'}>
@@ -125,7 +125,7 @@ export default function Team() {
                                         height={230}
                                         width={282}
                                         objectFit={'cover'}
-                                        src={'apropos2.jpeg'}
+                                        src={'apropos2.jpeg'} alt='Rschain'
                                     />
                                 </Box>
                                 <Stack pt={10} align={'center'}>
@@ -186,7 +186,7 @@ export default function Team() {
                                         height={230}
                                         width={282}
                                         objectFit={'cover'}
-                                        src={'apropos2.jpeg'}
+                                        src={'apropos2.jpeg'} alt='Rschain'
                                     />
                                 </Box>
                                 <Stack pt={10} align={'center'}>
@@ -247,7 +247,7 @@ export default function Team() {
                                         height={230}
                                         width={282}
                                         objectFit={'cover'}
-                                        src={'apropos2.jpeg'}
+                                        src={'apropos2.jpeg'} alt='Rschain'
                                     />
                                 </Box>
                                 <Stack pt={10} align={'center'}>
@@ -308,7 +308,7 @@ export default function Team() {
                                         height={230}
                                         width={282}
                                         objectFit={'cover'}
-                                        src={'apropos2.jpeg'}
+                                        src={'apropos2.jpeg'} alt='Rschain'
                                     />
                                 </Box>
                                 <Stack pt={10} align={'center'}>
