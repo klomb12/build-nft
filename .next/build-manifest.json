@@ -5,8 +5,8 @@
   "devFiles": [],
   "ampDevFiles": [],
   "lowPriorityFiles": [
-    "static/fYqAUjoUTz5x9YQuvLFto/_buildManifest.js",
-    "static/fYqAUjoUTz5x9YQuvLFto/_ssgManifest.js"
+    "static/u3Eei4CQM_CzPOsy4ZY8P/_buildManifest.js",
+    "static/u3Eei4CQM_CzPOsy4ZY8P/_ssgManifest.js"
   ],
   "pages": {
     "/": [
@@ -24,7 +24,7 @@
       "static/chunks/612-f3ca692d796398204eea.js",
       "static/chunks/93-0e439290a63bfe7196d8.js",
       "static/chunks/684-e5e9783f44e9f438e00b.js",
-      "static/chunks/205-b5e64642d1762677d291.js",
+      "static/chunks/205-06c6ae565230b6b54937.js",
       "static/chunks/pages/index-1fa67fcd22a1edb7e589.js"
     ],
     "/A_propos": [
@@ -70,7 +70,7 @@
       "static/chunks/612-f3ca692d796398204eea.js",
       "static/chunks/93-0e439290a63bfe7196d8.js",
       "static/chunks/684-e5e9783f44e9f438e00b.js",
-      "static/chunks/205-b5e64642d1762677d291.js",
+      "static/chunks/205-06c6ae565230b6b54937.js",
       "static/chunks/pages/Container-bc69f4cd562c403dbc41.js"
     ],
     "/NFT": [
@@ -138,7 +138,7 @@
       "static/chunks/612-f3ca692d796398204eea.js",
       "static/chunks/93-0e439290a63bfe7196d8.js",
       "static/chunks/684-e5e9783f44e9f438e00b.js",
-      "static/chunks/205-b5e64642d1762677d291.js",
+      "static/chunks/205-06c6ae565230b6b54937.js",
       "static/chunks/pages/content-7a0531766d8954f49caa.js"
     ],
     "/create-item/bsc-item": [
@@ -182,7 +182,7 @@
       "static/chunks/699-791a8381e5f526ccc4e1.js",
       "static/chunks/612-f3ca692d796398204eea.js",
       "static/chunks/684-e5e9783f44e9f438e00b.js",
-      "static/chunks/pages/fistpagecontent/apropos-395bcb07c13e99d5daf0.js"
+      "static/chunks/pages/fistpagecontent/apropos-819ab66db50dc75f855d.js"
     ],
     "/fistpagecontent/banniere": [
       "static/chunks/webpack-f56227c04d23bf5f7857.js",
